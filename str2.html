@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+        /* Общий стиль */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #9cecfb, #65c7f7, #0052d4);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #333;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header, footer, section {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        footer {
+            font-size: 14px;
+            color: #666;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button, a {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a {
+            background-color: #554bd3;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мир олимпиад</h1>
+        <p>Заполните форму для регистрации на олимпиаду.</p>
+    </header>
+    <section>
+        <h2>Регистрационная форма</h2>
+        <form action="#" method="POST">
+            <input type="text" name="full_name" placeholder="ФИО" required>
+            <input type="number" name="birth_year" placeholder="Год рождения" required>
+            <input type="text" name="city" placeholder="Город" required>
+            <input type="text" name="teacher_name" placeholder="ФИО преподавателя" required>
+            <input type="text" name="school_college" placeholder="Школа/Колледж" required>
+            <input type="text" name="course_class" placeholder="Курс/Класс" required>
+
+            <!-- Новый выпадающий список с датами -->
+            <select name="olympiad_date" required>
+                <option value="" disabled selected>Выберите дату проведения олимпиады</option>
+                <option value="01.09.2005">04.05.2005</option>
+                <option value="01.09.2006">07.03.2006</option>
+                <option value="01.09.2007">03.08.2007</option>
+                <option value="01.09.2008">12.02.2008</option>
+                <option value="01.09.2009">15.07.2009</option>
+                <option value="01.09.2010">23.12.2010</option>
+                <option value="01.09.2011">09.03.2011</option>
+                <option value="01.09.2012">10.04.2012</option>
+                <option value="01.09.2013">12.08.2013</option>
+                <option value="01.09.2014">17.10.2014</option>
+                <option value="01.09.2015">19.11.2015</option>
+                <option value="01.09.2016">09.01.2016</option>
+                <option value="01.09.2017">03.04.2017</option>
+                <option value="01.09.2018">05.06.2018</option>
+                <option value="01.09.2019">23.02.2019</option>
+                <option value="01.09.2020">19.12.2020</option>
+                <option value="01.09.2021">27.06.2021</option>
+                <option value="01.09.2022">18.03.2022</option>
+                <option value="01.09.2023">10.04.2023</option>
+                <option value="01.09.2024">05.09.2024</option>
+            </select>
+
+            <a href="str3.html">Зарегистрироваться</a>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Мир олимпиад. Все права защищены.</p>
+    </footer>
+</body>
+</html>

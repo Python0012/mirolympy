@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир олимпиад</title>
+    <style>
+        /* Общий стиль */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c, #f05454, #ff7eb3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        section {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button, a {
+            padding: 15px 30px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 5px;
+            cursor: not-allowed;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a {
+            background-color: #bbb;
+color: #000000;
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Анимации */
+        header, footer, section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        header.visible, footer.visible, section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок -->
+    <header>
+        <h1>Мир олимпиад</h1>
+        <p>Присоединяйтесь к сообществу самых умных, креативных и амбициозных людей!</p>
+    </header>
+
+    <!-- Выпадающий список -->
+    <section>
+       <h2>Выберите предмет:</h2>
+        <select id="subject-select">
+            <option value="" disabled selected>Выберите предмет</option>
+            <option value="page2.html?subject=math">Математика</option>
+            <option value="page2.html?subject=physics">Физика</option>
+            <option value="page2.html?subject=programming">Программирование</option>
+            <option value="page2.html?subject=car-repair">ТО и ремонт автомобилей</option>
+<option value="page2.html?subject=car-repair">Сварочные технологии</option>
+<option value="page2.html?subject=car-repair">Графический дизайн</option>
+<option value="page2.html?subject=car-repair">Менеджмент и маркетинг</option>
+<option value="page2.html?subject=car-repair">Медицинская диагностика</option>
+<option value="page2.html?subject=car-repair">Логистика</option>
+
+        </select>
+        
+        <a href="str2.html">Перейти</a>
+
+    </section>
+ 
+
+    <!-- Информация об олимпиадах -->
+    <section>
+        <h2>Почему стоит участвовать в олимпиадах?</h2>
+        <p>Олимпиады — это отличная возможность проявить себя, проверить свои знания и умения, а также получить награды и признание.</p>
+        <p>Они помогают развивать критическое мышление и вдохновляют на новые достижения.</p>
+    </section>
+
+    <!-- Некликабельная кнопка -->
+    <section>
+        <button>Связаться с нами</button>
+        <p>В ближайшее время функция связи будет доступна.</p>
+    </section>
+
+    <!-- Дополнительная информация -->
+    <footer>
+        <p>© 2024 Мир олимпиад. Все права защищены.</p>
+        <p>Наш сайт поддерживается ведущими образовательными организациями и экспертами в своих областях.</p>
+    </footer>
+
+    <!-- Скрипт для анимации -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('header, section, footer');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 300); // Появление элементов с задержкой
+            });
+        });
+
+    </script>
+ 
+</body>
+</html>
